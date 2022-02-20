@@ -22,3 +22,21 @@ function storedInput() {
 
 }
 
+
+
+var weather = {
+    apiKey: "850726882b51f2bfce0a7b5356258646",
+    fetchWeather: function (cityST) {
+    fetch(
+        "https://api.openweathermap.org/data/2.5/weather?q=" 
+        + cityST 
+        + "&units=imperial&appid=" 
+        + this.apiKey
+    )
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+},
+    displayWeather: function(data) {
+
+    }
+}

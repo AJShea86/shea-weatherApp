@@ -26,7 +26,8 @@ body{
 .history {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 228px;
+    min-width: 228px;
     border: 5px solid rgb(44, 74, 175);
     border-radius: 10px;
     margin-left: 20px;
@@ -56,7 +57,7 @@ body{
 } 
 
 .forecast{
-    width: 59%;
+    width: 100%;
     border: 5px solid rgb(44, 74, 175);
     border-radius: 10px;
     margin-left: 20px;
