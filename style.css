@@ -8,8 +8,15 @@
     margin: 20px;
 }
 
+body{
+    background-image: url(https://media.istockphoto.com/photos/clouds-on-sky-picture-id184103864?b=1&k=20&m=184103864&s=170667a&w=0&h=ZngznsmOs4gnb0bRP13q5RFXY-cv-BHZJNjJXb6ffyk=);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #citySearch{
     margin: 25px;
+    color: black;
 }
 
 #searchBar{
@@ -20,7 +27,7 @@
     display: flex;
     flex-direction: column;
     width: 220px;
-    border: 3px solid rgb(44, 74, 175);
+    border: 3px solid black;
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 10px;
@@ -32,12 +39,30 @@
 }
 .cityName{
     
-    width: 400px;
-    border: 3px solid rgb(44, 74, 175);
+    width: auto;
+    border: 3px solid black;
     border-radius: 10px;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
 }
-sidebar{
-  
-    
+.sideButtons{
+    display: flex;    
 
 } 
+
+.forecast{
+    width: 59%;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}

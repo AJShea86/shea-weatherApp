@@ -20,7 +20,7 @@
     <header>
       <h1 id="header">Weather Dashboard</h1>
     </header>
-    <aside class="sidebar">
+    <div class="sideButtons"><aside class="sidebar">
       <h2 id="citySearch">Search Cities</h2>
       <div id="searchBar" class="search">
         <input type="text" />
@@ -28,31 +28,31 @@
       </div>
       <div class="history" id="recentHistory">
         <p class="searchHistory" id="recentSearchOne">
-          <button type="button" id="recentButtonOne" class="btn btn-primary">
+          <button type="button" id="recentButtonOne" class="btn btn-warning">
             Denver
           </button>
         </p>
 
         <p class="searchHistory" id="recentSearchTwo">
-          <button type="button" id="recentButtonTwo" class="btn btn-primary">
+          <button type="button" id="recentButtonTwo" class="btn btn-warning">
             Kansas City
           </button>
         </p>
 
         <p class="searchHistory" id="recentSearchThree">
-          <button type="button" id="recentButtonThree" class="btn btn-primary">
+          <button type="button" id="recentButtonThree" class="btn btn-warning">
             San Diego
           </button>
         </p>
 
         <p class="searchHistory" id="recentSearchFour">
-          <button type="button" id="recentButtonFour" class="btn btn-primary">
+          <button type="button" id="recentButtonFour" class="btn btn-warning">
             Dallas
           </button>
         </p>
 
         <p class="searchHistory" id="recentSearchFive">
-          <button type="button" id="recentButtonFive" class="btn btn-primary">
+          <button type="button" id="recentButtonFive" class="btn btn-warning">
             Miami
           </button>
         </p>
@@ -60,12 +60,20 @@
     </aside>
     <div class="cityName"><h3>Denver, Colorado</h3>
         <h4>Date</h4>
-    <p>Temperature</p>
-    <p>Humidity</p>
-    <p>Wind Speed</p>
-    <p>UV Index</p>
+    <p><b>Temperature</b></p>
+    <p><b>Humidity</b></p>
+    <p><b>Wind Speed</b></p>
+    <p><b>UV Index</b></p>
+    </div>
+    <div class="forecast"><h4>5 Day Forecast</h4>
+    <p class="dayOne">Day 1 Forecast</p>
+    <p class="dayTwo">Day 2 Forecast</p>
+    <p class="dayThree">Day 3 Forecast</p>
+    <p class="dayFour">Day 4 Forecast</p>
+    <p class="dayFive">Day 5 Forecast</p>
     </div>
 
+    </div>
 
     <script src="./script.js"></script>
   </body>
