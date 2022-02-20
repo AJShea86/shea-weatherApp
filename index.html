@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Weather</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/26033b3180.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="header">Weather Dashboard</h1>
+    </header>
+    <aside>
+        <h2 id="citySearch">Search Cities</h2>
+      <div id="searchBar" class="search"><input type="text"/>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="history"id="recentHistory">
+          <p class="searchHistory" id="recentSearchOne"><button type="button" id="recentButtonOne"class="btn btn-primary">Denver</button></p>
+
+          <p class="searchHistory" id="recentSearchTwo"><button type="button" id="recentButtonTwo"class="btn btn-primary">Kansas City</button></p>
+
+          <p class="searchHistory" id="recentSearchThree"><button type="button" id="recentButtonThree"class="btn btn-primary">San Diego</button></p>
+
+          <p class="searchHistory" id="recentSearchFour"><button type="button" id="recentButtonFour"class="btn btn-primary">Dallas</button></p>
+
+          <p class="searchHistory" id="recentSearchFive"><button type="button" id="recentButtonFive"class="btn btn-primary">Miami</button></p>
+      </div>
+
+
+
+
+
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
