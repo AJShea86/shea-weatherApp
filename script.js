@@ -1,26 +1,30 @@
 
 // input for the text area
-var enteredText = document.getElementById("enteredText");
+// var enteredText = document.getElementById("enteredText");
 
 
 //for the display
-var cityText = document.getElementById("cityText");
+// var cityText = document.getElementById("cityText");
 
 //add button
-var searchButton = document.getElementById("searchButton");
+// var searchButton = document.getElementById("searchButton");
 
-searchButton.addEventListener("click", storedInput)
+// searchButton.addEventListener("click", storedInput)
+
+    
 
 
 
 
-function storedInput() {
-    var storedText = enteredText.value;
-    localStorage.setItem("searchInput", storedText);
-    cityText.textContent = storedText;
-    enteredText.value = "";
 
-}
+
+// function storedInput() {
+//     var storedText = enteredText.value;
+//     localStorage.setItem("searchInput", storedText);
+//     cityText.textContent = storedText;
+//     enteredText.value = "";
+
+// }
 
 
 
@@ -43,13 +47,26 @@ var weather = {
         var {speed} = data.wind
         console.log(name,icon,description,temp,humidity,speed)
         document.querySelector("#cityText").textContent = "Weather in " + name;
-        document.querySelector("#temperature").textContent = "Temperature " + temp;
-        document.querySelector("#humidity").textContent = "Humidity: " + humidity;
-        document.querySelector("#windSpeed").textContent = "windSpeed: " + speed;
-        document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+        document.querySelector("#temperature").textContent = "Temperature: " + temp + "° F";
+        document.querySelector("#humidity").textContent = "Humidity: " + humidity + "%";
+        document.querySelector("#windSpeed").textContent = "Wind Speed: " + speed + " mph";
 
         // document.querySelector(".uvIndex").textContent = "Temperature" + uvIndex;
-
+    },
+    search: function(){
+        this.fetchWeather(document.querySelector("#enteredText").value);
 
     }
+
+};
+
+
+
+document.querySelector("#searchButton").addEventListener("click", function(){
+    weather.search();
+    enteredText.value = "";
+
+
 }
+
+);
