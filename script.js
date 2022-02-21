@@ -171,5 +171,12 @@ function saveCities() {
 }
 saveCities();
 
+var clockElement = document.getElementById("clock");
+
+function clock() {
+  clockElement.textContent =
+    moment().format("dddd") + " " + moment().format("MMMM Do YYYY");
+}
+setInterval(clock, 1000);
 
   
