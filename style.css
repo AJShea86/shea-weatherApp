@@ -61,6 +61,7 @@ body{
 
 .forecast{
     width: 100%;
+    
     border: 5px solid rgb(44, 74, 175);
     border-radius: 10px;
     margin-left: 20px;
@@ -72,8 +73,14 @@ body{
     padding: 10px;
 
 }
-
-#cityText{
-   
-
-}
+/* .div-toolTip {
+    opacity: 0;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background:lightskyblue;
+    color: black;
+    padding: 10px 20px;
+    margin: 20px;   
+    z-index: 9999;
+} */
