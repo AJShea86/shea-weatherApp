@@ -38,7 +38,7 @@ var weather = {
         var longLat = data.coord;
         console.log("first api call", data);
         fetch(
-          `https://api.openweathermap.org/data/2.5/onecall?lat=${longLat.lat}&lon=${longLat.lon}&appid=${this.apiKey}`
+          `https://api.openweathermap.org/data/2.5/onecall?lat=${longLat.lat}&lon=${longLat.lon}&units=imperial&appid=${this.apiKey}`
         )
           .then((response) => response.json())
           .then((data) => this.displayWeather(data));
@@ -56,26 +56,35 @@ var weather = {
     var dayOneHumidity = data.daily[0].humidity;
     var dayOneWindSpeed = data.daily[0].wind_speed;
     var dayOneUvIndex = data.daily[0].uvi;
+    var dayOneIcon = data.daily[0].weather[0].icon;
 
     var dayTwoTemp = data.daily[1].temp.day;
     var dayTwoHumidity = data.daily[1].humidity;
     var dayTwoWindSpeed = data.daily[1].wind_speed;
     var dayTwoUvIndex = data.daily[1].uvi;
+    var dayTwoIcon = data.daily[1].weather[0].icon;
+
 
     var dayThreeTemp = data.daily[2].temp.day;
     var dayThreeHumidity = data.daily[2].humidity;
     var dayThreeWindSpeed = data.daily[2].wind_speed;
     var dayThreeUvIndex = data.daily[2].uvi;
+    var dayThreeIcon = data.daily[2].weather[0].icon;
+
 
     var dayFourTemp = data.daily[3].temp.day;
     var dayFourHumidity = data.daily[3].humidity;
     var dayFourWindSpeed = data.daily[3].wind_speed;
     var dayFourUvIndex = data.daily[3].uvi;
+    var dayFourIcon = data.daily[3].weather[0].icon;
+
 
     var dayFiveTemp = data.daily[4].temp.day;
     var dayFiveHumidity = data.daily[4].humidity;
     var dayFiveWindSpeed = data.daily[4].wind_speed;
     var dayFiveUvIndex = data.daily[4].uvi;
+    var dayFiveIcon = data.daily[4].weather[0].icon;
+
 
 
 
@@ -92,34 +101,43 @@ var weather = {
       "Wind Speed: " + speed + " mph";
 
     document.querySelector("#uvIndex").textContent = "UV Index: " + uvIndex;
-    document.getElementById(
-      "weatherIcon"
-    ).src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-    console.log(dayOneTemp)
-    document.getElementById("dayOneTemp").textContent =  JSON.stringify(dayOneTemp);
-    document.getElementById("dayOneHumidity").textContent =  JSON.stringify(dayOneHumidity);
-    document.getElementById("dayOneWindSpeed").textContent =  JSON.stringify(dayOneWindSpeed);
-    document.getElementById("dayOneUvIndex").textContent =  JSON.stringify(dayOneUvIndex);
 
-    document.getElementById("dayTwoTemp").textContent =  JSON.stringify(dayTwoTemp);
-    document.getElementById("dayTwoHumidity").textContent =  JSON.stringify(dayTwoHumidity);
-    document.getElementById("dayTwoWindSpeed").textContent =  JSON.stringify(dayTwoWindSpeed);
-    document.getElementById("dayTwoUvIndex").textContent =  JSON.stringify(dayTwoUvIndex);
+    document.getElementById("weatherIcon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
-    document.getElementById("dayThreeTemp").textContent =  JSON.stringify(dayThreeTemp);
-    document.getElementById("dayThreeHumidity").textContent =  JSON.stringify(dayThreeHumidity);
-    document.getElementById("dayThreeWindSpeed").textContent =  JSON.stringify(dayThreeWindSpeed);
-    document.getElementById("dayThreeUvIndex").textContent =  JSON.stringify(dayThreeUvIndex);
+    document.getElementById("dayOneTemp").textContent = "Temp: " + JSON.stringify(dayOneTemp) + "° F";
+    document.getElementById("dayOneHumidity").textContent =  "Humidity: " + JSON.stringify(dayOneHumidity) + "%";
+    document.getElementById("dayOneWindSpeed").textContent =  "Wind Speed: " + JSON.stringify(dayOneWindSpeed) + "mph";
+    document.getElementById("dayOneUvIndex").textContent =  "UV Index: " + JSON.stringify(dayOneUvIndex);
 
-    document.getElementById("dayFourTemp").textContent =  JSON.stringify(dayFourTemp);
-    document.getElementById("dayFourHumidity").textContent =  JSON.stringify(dayFourHumidity);
-    document.getElementById("dayFourWindSpeed").textContent =  JSON.stringify(dayFourWindSpeed);
-    document.getElementById("dayFourUvIndex").textContent =  JSON.stringify(dayFourUvIndex);
+    document.getElementById("dayOneIcon").src = `http://openweathermap.org/img/wn/${dayOneIcon}@2x.png`
+    document.getElementById("dayTwoIcon").src = `http://openweathermap.org/img/wn/${dayTwoIcon}@2x.png`
+    document.getElementById("dayThreeIcon").src = `http://openweathermap.org/img/wn/${dayThreeIcon}@2x.png`
+    document.getElementById("dayFourIcon").src = `http://openweathermap.org/img/wn/${dayFourIcon}@2x.png`
+    document.getElementById("dayFiveIcon").src = `http://openweathermap.org/img/wn/${dayFiveIcon}@2x.png`
 
-    document.getElementById("dayFiveTemp").textContent =  JSON.stringify(dayFiveTemp);
-    document.getElementById("dayFiveHumidity").textContent =  JSON.stringify(dayFiveHumidity);
-    document.getElementById("dayFiveWindSpeed").textContent =  JSON.stringify(dayFiveWindSpeed);
-    document.getElementById("dayFiveUvIndex").textContent =  JSON.stringify(dayFiveUvIndex);
+
+
+
+
+    document.getElementById("dayTwoTemp").textContent =  "Temp: " + JSON.stringify(dayTwoTemp) + "° F";
+    document.getElementById("dayTwoHumidity").textContent =  "Humidity: " + JSON.stringify(dayTwoHumidity) + "%";
+    document.getElementById("dayTwoWindSpeed").textContent =  "Wind Speed: " + JSON.stringify(dayTwoWindSpeed) + "mph";
+    document.getElementById("dayTwoUvIndex").textContent =  "UV Index: " + JSON.stringify(dayTwoUvIndex);
+
+    document.getElementById("dayThreeTemp").textContent =  "Temp: " + JSON.stringify(dayThreeTemp) + "° F";
+    document.getElementById("dayThreeHumidity").textContent =  "Humidity: " + JSON.stringify(dayThreeHumidity) + "%";
+    document.getElementById("dayThreeWindSpeed").textContent =  "Wind Speed: " + JSON.stringify(dayThreeWindSpeed) + "mph";
+    document.getElementById("dayThreeUvIndex").textContent =  "UV Index: " + JSON.stringify(dayThreeUvIndex);
+
+    document.getElementById("dayFourTemp").textContent =  "Temp: " + JSON.stringify(dayFourTemp) + "° F";
+    document.getElementById("dayFourHumidity").textContent =  "Humidity: " + JSON.stringify(dayFourHumidity) + "%";
+    document.getElementById("dayFourWindSpeed").textContent =  "Wind Speed: " + JSON.stringify(dayFourWindSpeed) + "mph";
+    document.getElementById("dayFourUvIndex").textContent =  "UV Index: " + JSON.stringify(dayFourUvIndex);
+
+    document.getElementById("dayFiveTemp").textContent =  "Temp: " + JSON.stringify(dayFiveTemp) + "° F";
+    document.getElementById("dayFiveHumidity").textContent =  "Humidity: " + JSON.stringify(dayFiveHumidity) + "%";
+    document.getElementById("dayFiveWindSpeed").textContent =  "Wind Speed: " + JSON.stringify(dayFiveWindSpeed) + "mph";
+    document.getElementById("dayFiveUvIndex").textContent =  "UV Index: " + JSON.stringify(dayFiveUvIndex);
 
 
   },
