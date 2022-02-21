@@ -172,11 +172,78 @@ function saveCities() {
 saveCities();
 
 var clockElement = document.getElementById("clock");
+var presentDay = moment().format("dddd")
 
 function clock() {
   clockElement.textContent =
-    moment().format("dddd") + " " + moment().format("MMMM Do YYYY");
+  presentDay + " " + moment().format("MMMM Do");
 }
 setInterval(clock, 1000);
+////////////////
 
-  
+
+var forecastDayOne = document.getElementById("forecastDayOne")
+
+///////////////////  0         1           2           3         4         5         6
+var daysOfWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+
+function forecastDays(){
+  // write a function that will display days of the week on the forecast cards
+  if(presentDay === daysOfWeek[0]) {
+    forecastDayOne.textContent = daysOfWeek[1];
+    forecastDayTwo.textContent = daysOfWeek[2];
+    forecastDayThree.textContent = daysOfWeek[3];
+    forecastDayFour.textContent = daysOfWeek[4];
+    forecastDayFive.textContent = daysOfWeek[5];
+  }
+
+  if(presentDay === daysOfWeek[1]) {
+    forecastDayOne.textContent = daysOfWeek[2];
+    forecastDayTwo.textContent = daysOfWeek[3];
+    forecastDayThree.textContent = daysOfWeek[4];
+    forecastDayFour.textContent = daysOfWeek[5];
+    forecastDayFive.textContent = daysOfWeek[6];
+  }
+
+  if(presentDay === daysOfWeek[2]) {
+    forecastDayOne.textContent = daysOfWeek[3];
+    forecastDayTwo.textContent = daysOfWeek[4];
+    forecastDayThree.textContent = daysOfWeek[5];
+    forecastDayFour.textContent = daysOfWeek[6];
+    forecastDayFive.textContent = daysOfWeek[0];
+  }
+
+  if(presentDay === daysOfWeek[3]) {
+    forecastDayOne.textContent = daysOfWeek[4];
+    forecastDayTwo.textContent = daysOfWeek[5];
+    forecastDayThree.textContent = daysOfWeek[6];
+    forecastDayFour.textContent = daysOfWeek[0];
+    forecastDayFive.textContent = daysOfWeek[1];
+  }
+
+  if(presentDay === daysOfWeek[4]) {
+    forecastDayOne.textContent = daysOfWeek[5];
+    forecastDayTwo.textContent = daysOfWeek[6];
+    forecastDayThree.textContent = daysOfWeek[0];
+    forecastDayFour.textContent = daysOfWeek[1];
+    forecastDayFive.textContent = daysOfWeek[2];
+  }
+
+  if(presentDay === daysOfWeek[5]) {
+    forecastDayOne.textContent = daysOfWeek[6];
+    forecastDayTwo.textContent = daysOfWeek[0];
+    forecastDayThree.textContent = daysOfWeek[1];
+    forecastDayFour.textContent = daysOfWeek[2];
+    forecastDayFive.textContent = daysOfWeek[3];
+  }
+
+  if(presentDay === daysOfWeek[6]) {
+    forecastDayOne.textContent = daysOfWeek[0];
+    forecastDayTwo.textContent = daysOfWeek[1];
+    forecastDayThree.textContent = daysOfWeek[2];
+    forecastDayFour.textContent = daysOfWeek[3];
+    forecastDayFive.textContent = daysOfWeek[4];
+  }
+
+}
+forecastDays();
