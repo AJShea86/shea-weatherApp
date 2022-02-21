@@ -41,8 +41,10 @@ var weather = {
           `https://api.openweathermap.org/data/2.5/onecall?lat=${longLat.lat}&lon=${longLat.lon}&units=imperial&appid=${this.apiKey}`
         )
           .then((response) => response.json())
-          .then((data) => this.displayWeather(data));
-      });
+          .then((data) => this.displayWeather(data)).catch(error=>console.log(error));
+
+      }).catch(error=>console.log(error));
+
   },
   displayWeather: function (data) {
     console.log(data);
@@ -166,8 +168,15 @@ function saveCities() {
     element.classList.add("btn");
     element.classList.add("btn-warning");
     element.classList.add("my-2");
+    element.addEventListener("click", handleSavedCityClick)
     cityList.appendChild(element);
+
   }
+}
+function handleSavedCityClick(event){
+  var city = event.target.id;
+  weather.fetchWeather(city);
+  cityText.textContent = city;
 }
 saveCities();
 
@@ -187,8 +196,8 @@ var forecastDayOne = document.getElementById("forecastDayOne")
 ///////////////////  0         1           2           3         4         5         6
 var daysOfWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 
-function forecastDays(){
   // write a function that will display days of the week on the forecast cards
+function forecastDays(){
   if(presentDay === daysOfWeek[0]) {
     forecastDayOne.textContent = daysOfWeek[1];
     forecastDayTwo.textContent = daysOfWeek[2];
@@ -247,3 +256,7 @@ function forecastDays(){
 
 }
 forecastDays();
+
+//displays denver as city on page load
+weather.fetchWeather("Denver");
+cityText.textContent = "Denver";
