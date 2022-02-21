@@ -31,55 +31,76 @@
           </button>
         </div>
         <div class="history" id="recentHistory">
-          <p class="searchHistory" id="recentSearchOne">
-            <button type="button" id="recentButtonOne" class="btn btn-warning">
-              Denver
-            </button>
-          </p>
-
-          <p class="searchHistory" id="recentSearchTwo">
-            <button type="button" id="recentButtonTwo" class="btn btn-warning">
-              Kansas City
-            </button>
-          </p>
-
-          <p class="searchHistory" id="recentSearchThree">
-            <button
-              type="button"
-              id="recentButtonThree"
-              class="btn btn-warning"
-            >
-              San Diego
-            </button>
-          </p>
-
-          <p class="searchHistory" id="recentSearchFour">
-            <button type="button" id="recentButtonFour" class="btn btn-warning">
-              Dallas
-            </button>
-          </p>
-
-          <p class="searchHistory" id="recentSearchFive">
-            <button type="button" id="recentButtonFive" class="btn btn-warning">
-              Miami
-            </button>
-          </p>
         </div>
       </aside>
       <div class="cityName">
         <h3 id="cityText"></h3>
+        <img id="weatherIcon" alt="weather icon">
         <p id = "temperature"><b></b></p>
         <p id = "humidity"><b></b></p>
         <p id = "windSpeed"><b></b></p>
         <p id = "uvIndex"><b></b></p>
       </div>
+
       <div class="forecast">
         <h4>5 Day Forecast</h4>
-        <p class="dayOne">Day 1 Forecast</p>
-        <p class="dayTwo">Day 2 Forecast</p>
-        <p class="dayThree">Day 3 Forecast</p>
-        <p class="dayFour">Day 4 Forecast</p>
-        <p class="dayFive">Day 5 Forecast</p>
+
+        <div class="card text-center" style="width: 10rem; height: 13rem">
+          <div class="card-body">
+            <h5 id="forecastDayOne" class="card-title">Day1</h5>
+            <p id="dayOneTemp" class="card-text"></p>
+            <p id="dayOneHumidity" class="card-text">Humidity</p>
+            <p id="dayOneWindSpeed" class="card-text">Wind Speed</p>
+            <p id="dayOneUvIndex" class="card-text">UV Index</p>
+
+          </div>
+        </div>
+        
+        <div class="card text-center" style="width: 10rem; height: 13rem">
+          <div class="card-body">
+            <h5 id="forecastDayTwo" class="card-title">Day2</h5>
+            <p id="dayTwoTemp" class="card-text">Temp</p>
+            <p id="dayTwoHumidity" class="card-text">Humidity</p>
+            <p id="dayTwoWindSpeed" class="card-text">Wind Speed</p>
+            <p id="dayTwoUvIndex" class="card-text">UV Index</p>
+
+          </div>
+        </div>
+        
+        <div class="card text-center" style="width: 10rem; height: 13rem">
+          <div class="card-body">
+            <h5 id="forecastDayThree" class="card-title">Day3</h5>
+            <p id="dayThreeTemp" class="card-text">Temp</p>
+            <p id="dayThreeHumidity" class="card-text">Humidity</p>
+            <p id="dayThreeWindSpeed" class="card-text">Wind Speed</p>
+            <p id="dayThreeUvIndex" class="card-text">UV Index</p>
+
+          </div>
+        </div>
+
+        <div class="card text-center" style="width: 10rem; height: 13rem">
+          <div class="card-body">
+            <h5 id="forecastDayFour" class="card-title">Day4</h5>
+            <p id="dayFourTemp" class="card-text">Temp</p>
+            <p id="dayFourHumidity" class="card-text">Humidity</p>
+            <p id="dayFourWindSpeed" class="card-text">Wind Speed</p>
+            <p id="dayFourUvIndex" class="card-text">UV Index</p>
+
+          </div>
+        </div>
+
+        <div class="card text-center" style="width: 10rem; height: 13rem">
+          <div class="card-body">
+            <h5 id="forecastDayFive" class="card-title">Day5</h5>
+            <p id="dayFiveTemp" class="card-text">Temp</p>
+            <p id="dayFiveHumidity" class="card-text">Humidity</p>
+            <p id="dayFiveWindSpeed" class="card-text">Wind Speed</p>
+            <p id="dayFiveUvIndex" class="card-text">UV Index</p>
+
+          </div>
+        </div>
+
+        </div>        
       </div>
     </div>
     <script src="./script.js"></script>
