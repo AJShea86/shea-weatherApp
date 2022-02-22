@@ -102,7 +102,7 @@ var weather = {
     document.querySelector("#windSpeed").textContent =
       "Wind Speed: " + speed + " mph";
 
-    document.querySelector("#uvIndex").textContent = "UV Index: " + uvIndex;
+    document.querySelector("#uvIndex").textContent = uvIndex;
 
     document.getElementById("weatherIcon").src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
@@ -260,3 +260,10 @@ forecastDays();
 //displays denver as city on page load
 weather.fetchWeather("Denver");
 cityText.textContent = "Denver";
+
+//need to make a function that displays uv index conditions
+
+
+// var toolTip = document.getElementById("toolTipInfo");
+// console.log(toolTip);
+// console.log(toolTip.dataset.originalTitle);

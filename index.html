@@ -38,10 +38,14 @@
         <p id="temperature"></p>
         <p id="humidity"></p>
         <p id="windSpeed"></p>
-        <!-- tool tip stuff here -->
-        <button type="button" class="btn tool" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">         
-
-        <p id="uvIndex" data-toggle="tooltip" data-placement="bottom"></p>
+        <div id="uvIndexBg" class= "uvIndexColor" >
+        <p>UV Index:&nbsp
+        </p>
+        <!-- target this class for styling the colors of the uv index -->
+        <div class = "uvBox"> 
+        <p id="uvIndex" class="m-0 text-white"></p>
+      </div>
+        </div>
       </button>
       </div>
 
